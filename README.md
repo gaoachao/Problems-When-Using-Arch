@@ -2,15 +2,17 @@
 
 ### 前言：
 
-为了纪念存活17天的archlinux（4.9-4.25）以及懊恼于重装系统后搭建开发环境时第二遍踩入的坑。为了防止下一次重装系统时避免走入歧途，同时希望对完成装载archlinux系统后配置环境的同学提供一些帮助，于是写下一些文字。
+为了纪念存活17天的archlinux（4.9-4.25）以及懊恼于重装系统后搭建开发环境时第二遍踩入的坑。也为了防止下一次重装系统时走入歧途，同时希望对完成装载archlinux系统后配置环境的同学提供一些帮助，bitter-gourd决定写下一些文字。
 
 此处特别鸣谢全世界最好的:heart:鲨鱼姐姐:heart:
 
-一些友情链接:https://www.viseator.com/2017/07/02/arch_more/ (archlinux下配置开发环境)
+一些友情链接:
 
-​                       https://www.viseator.com/2017/05/17/arch_install/  (安装arch)
+https://www.viseator.com/2017/07/02/arch_more/ (archlinux下配置开发环境)
 
-​                        https://github.com/JunkFood02/Arch-Linux-Installation-Guide (安装arch)
+https://www.viseator.com/2017/05/17/arch_install/  (安装arch)
+
+https://github.com/JunkFood02/Arch-Linux-Installation-Guide (安装arch)
 
 ### 配置git
 
@@ -142,7 +144,7 @@ pacman -Qtdq | pacman -Rns -
 
 ### VS code 安装相关
 
-1.about fail to use contension:open in browers  (can't open with google)
+1.about failing to use contension:open in browers 
 
 ```shell
 Vscode Error : 
