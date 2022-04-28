@@ -142,7 +142,7 @@ pacman -Qtdq | pacman -Rns -
 
 ### VS code 安装相关
 
-1.contension:open in browers
+1.about fail to use contension:open in browers  (can't open with google)
 
 ```shell
 Vscode Error : 
