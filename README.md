@@ -173,7 +173,10 @@ pacman -Qtdq | pacman -Rns -
 
 ### git token automatically authentication
 
-git-credential-manager-core
+```shell
+yay -S git-credential-manager-core
+git config --global credential.credentialStore cache
+```
 
 https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
 
