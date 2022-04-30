@@ -14,6 +14,10 @@ https://www.viseator.com/2017/05/17/arch_install/  (安装arch)
 
 https://github.com/JunkFood02/Arch-Linux-Installation-Guide (安装arch)
 
+### **4.30补充**：
+
+为了纪念存活4天的airchlinux(4.26-4.29)bitter-gourd决定再写点配置过程中新遇到的坑和解决方案。
+
 ### 配置git
 
 1.git默认编辑器为vi，而非vim，因此建议在安装vscode后将默认编辑器转换后再打开configuration file
@@ -31,7 +35,7 @@ git config --global http.proxy http://
 
 ### 使用yay过程中遇到的困难
 
-在一个*天xian气de晴dan朗teng*的下午有一点点想喝酸奶（bushi）结果看到这个东西。
+在一个*天xian气de晴dan朗teng*的下午yay a package看到这个东西。
 
 ```shell
 error: GPGME error: No data
@@ -118,7 +122,9 @@ code .zshrc
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%}'
 ```
 
- 5.将zsh设为默认shell
+ 补充：事实上只是 git init了home目录。
+
+5.将zsh设为默认shell
 
 ```shell
 sudo chsh -s /bin/zsh username
@@ -127,11 +133,28 @@ sudo chsh -s /bin/zsh username
 ### 一些有用的package
 
 ```shell
-yay -Syu tokei   (代码统计)
-yay -Syu spectacle（截图工具，可以自己设置快捷键）
+yay -S tokei   (代码统计)
+yay -S spectacle（截图工具，可以自己设置快捷键）
+yay -S Yakuake  (终端模拟器)
 ```
 
 ### 中文输入法
+
+中文输入法需要安装`fcitx`包与`fcitx-im`集合包，再加上一个中文支持包，可以到https://wiki.archlinux.org/index.php/fcitx#Chinese中挑选一个喜欢的包装上。(推荐搜狗拼音)
+
+```shell
+yay -S fcitx
+yay -S fcitx-im
+yay -S fcitx-sogoupinyin
+```
+
+装完以后需要修改`/etc/profile`文件，在文件开头加入三行：
+
+```shell
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+```
 
 倘若在安装中文输入法的过程中不小心安装某些百度输入法（https://wiki.archlinux.org/index.php/fcitx#Chinese）会发现无法使用，且每次yay都会在“searching AUR for updates”中出现如下提示(孤儿包)：
 
@@ -141,6 +164,12 @@ Orphaned AUR Packages:  fcitx-baidupinyin
 solution:
 pacman -Qtdq | pacman -Rns -
 ```
+
+### 系统时间
+
+如果发现系统时间错乱
+
+友情链接：https://wiki.archlinux.org/title/System_time#Read_hardware_clock
 
 ### VS code 安装相关
 
