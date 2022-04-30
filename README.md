@@ -171,6 +171,10 @@ pacman -Qtdq | pacman -Rns -
 
 友情链接：https://wiki.archlinux.org/title/System_time#Read_hardware_clock
 
+### git token automatically authentication
+
+
+
 ### VS code 安装相关
 
 1.about failing to use contension:open in browers 
