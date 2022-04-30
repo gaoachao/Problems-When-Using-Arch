@@ -180,6 +180,8 @@ git config --global credential.credentialStore cache
 
 https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
 
+此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
+
 ### VS code 安装相关
 
 1.about failing to use contension:open in browers 
