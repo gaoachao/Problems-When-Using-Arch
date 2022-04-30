@@ -175,6 +175,8 @@ pacman -Qtdq | pacman -Rns -
 
 git-credential-manager-core
 
+https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
+
 ### VS code 安装相关
 
 1.about failing to use contension:open in browers 
