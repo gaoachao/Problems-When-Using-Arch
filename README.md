@@ -173,7 +173,7 @@ pacman -Qtdq | pacman -Rns -
 
 ### git token automatically authentication
 
-
+git-credential-manager-core
 
 ### VS code 安装相关
 
