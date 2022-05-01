@@ -197,9 +197,9 @@ error:
 fatal: Failed to open secret service session [0x2]
 fatal: The name org.freedesktop.secrets was not provided by any .service files
 
+solution:
+yay -S gonme-keyring
 ```
-
-
 
 ### zsh内中文显示与git中文显示问题
 
