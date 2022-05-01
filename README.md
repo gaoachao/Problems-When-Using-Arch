@@ -186,6 +186,8 @@ https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/cr
 
 此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
 
+cache只是一种内置临时缓存，默认情况下存储900秒。
+
 ### zsh内中文显示与git中文显示问题
 
 发现设置成英文后，终端内仍然有大量中文。
