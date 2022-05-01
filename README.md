@@ -140,7 +140,9 @@ yay -S Yakuake  (终端模拟器,快捷键F12)
 
 ### 中文输入法
 
-中文输入法需要安装`fcitx`包与`fcitx-im`集合包，再加上一个中文支持包，可以到https://wiki.archlinux.org/index.php/fcitx#Chinese中挑选一个喜欢的包装上。(推荐搜狗拼音)
+中文输入法需要安装`fcitx`包与`fcitx-im`集合包，再加上一个中文支持包，可以到下面这个链接中挑选一个喜欢的包装上。(推荐搜狗拼音)
+
+https://wiki.archlinux.org/index.php/fcitx#Chinese
 
 ```shell
 yay -S fcitx
@@ -156,7 +158,9 @@ export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 ```
 
-倘若在安装中文输入法的过程中不小心安装某些百度输入法（https://wiki.archlinux.org/index.php/fcitx#Chinese）会发现无法使用，且每次yay都会在“searching AUR for updates”中出现如下提示(孤儿包)：
+倘若在安装中文输入法的过程中不小心安装某些百度输入法会发现无法使用，且每次yay都会在“searching AUR for updates”中出现如下提示(孤儿包)：
+
+https://wiki.archlinux.org/index.php/fcitx#Chinese
 
 ```shell
 Orphaned AUR Packages:  fcitx-baidupinyin
