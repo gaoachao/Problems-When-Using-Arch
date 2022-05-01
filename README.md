@@ -135,7 +135,7 @@ sudo chsh -s /bin/zsh username
 ```shell
 yay -S tokei   (代码统计)
 yay -S spectacle（截图工具，可以自己设置快捷键）
-yay -S Yakuake  (终端模拟器)
+yay -S Yakuake  (终端模拟器,快捷键F12)
 ```
 
 ### 中文输入法
@@ -167,9 +167,13 @@ pacman -Qtdq | pacman -Rns -
 
 ### 系统时间
 
-如果发现系统时间错乱
+如果发现系统时间错乱(包括arch和windows)
 
-友情链接：https://wiki.archlinux.org/title/System_time#Read_hardware_clock
+友情链接：
+
+https://wiki.archlinux.org/title/System_time#Read_hardware_clock
+
+https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
 ### git token automatically authentication
 
@@ -181,6 +185,21 @@ git config --global credential.credentialStore cache
 https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
 
 此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
+
+### zsh内中文显示与git中文显示问题
+
+发现设置成英文后，终端内仍然有大量中文。
+
+友情链接：
+
+https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AF%AD%E8%A8%80%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9
+
+git设置：
+
+```shell
+code .zshrc
+alias git='LANG=en_GB git'
+```
 
 ### VS code 安装相关
 
