@@ -188,6 +188,8 @@ https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/cr
 
 cache只是一种内置临时缓存，默认情况下存储900秒。
 
+可以尝试secretservice。
+
 ### zsh内中文显示与git中文显示问题
 
 发现设置成英文后，终端内仍然有大量中文。
