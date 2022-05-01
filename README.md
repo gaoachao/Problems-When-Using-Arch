@@ -35,7 +35,7 @@ git config --global http.proxy http://
 
 ### 使用yay过程中遇到的困难
 
-在一个*天xian气de晴dan朗teng*的下午yay a package看到这个东西。
+在一个*天xian气de晴dan朗teng*的下午想yay a package 但看到这个东西。
 
 ```shell
 error: GPGME error: No data
@@ -189,6 +189,17 @@ https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/cr
 cache只是一种内置临时缓存，默认情况下存储900秒。
 
 可以尝试secretservice。
+
+```shell
+git config --global credential.credentialStore secretservice
+
+error:
+fatal: Failed to open secret service session [0x2]
+fatal: The name org.freedesktop.secrets was not provided by any .service files
+
+```
+
+
 
 ### zsh内中文显示与git中文显示问题
 
