@@ -172,7 +172,7 @@ pacman -Qtdq | pacman -Rns -
 
 ### 系统时间
 
-如果发现系统时间错乱(包括arch和windows)
+如果发现系统时间错乱(包括archlinux和windows)的解决方案：
 
 友情链接：
 
@@ -196,7 +196,7 @@ cache只是一种内置临时缓存，默认情况下存储900秒。
 可以尝试secretservice。
 
 ```shell
-git config --global credential.credentialStore secretservice
+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git config --global credential.credentialStore secretservice
 
 error:
 fatal: Failed to open secret service session [0x2]
