@@ -182,6 +182,10 @@ https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
 ### git token automatically authentication
 
+友情链接：
+
+https://github.com/GitCredentialManager/git-credential-manager
+
 ```shell
 yay -S git-credential-manager-core
 git config --global credential.credentialStore cache
