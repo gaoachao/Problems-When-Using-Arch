@@ -206,6 +206,13 @@ solution:
 yay -S gnome-keyring
 ```
 
+遇到一个error：
+
+```sheel
+fatal: Failed to open secret service session [0x13]
+fatal: No such secret item at path: /org/freedesktop/secrets/collection/login/1
+```
+
 ### zsh内中文显示与git中文显示问题
 
 发现设置成英文后，终端内仍然有大量中文。
