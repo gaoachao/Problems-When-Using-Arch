@@ -193,7 +193,9 @@ git config --global credential.credentialStore cache
 
 https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
 
-此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
+curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh &&
+sh ./install-from-source.sh &&
+git-credential-manager-core configure此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
 
 cache只是一种内置临时缓存，默认情况下存储900秒。
 
@@ -214,9 +216,21 @@ yay -S seahorse
 
 然后第二天遇到一个error：
 
+https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
+
+下载最新的GCM 推荐deb格式
+
 ```sheel
 fatal: Failed to open secret service session [0x13]
 fatal: No such secret item at path: /org/freedesktop/secrets/collection/login/1
+
+solution:
+curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh &&
+sh ./install-from-source.sh &&
+git-credential-manager-core configure
+
+sudo dpkg -i <path-to-package>
+git-credential-manager-core configure
 ```
 
 ### zsh内中文显示与git中文显示问题
