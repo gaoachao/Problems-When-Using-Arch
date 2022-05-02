@@ -208,7 +208,7 @@ yay -S gnome-keyring
 yay -S seahorse
 ```
 
-遇到一个error：
+然后第二天遇到一个error：
 
 ```sheel
 fatal: Failed to open secret service session [0x13]
