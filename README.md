@@ -180,59 +180,6 @@ https://wiki.archlinux.org/title/System_time#Read_hardware_clock
 
 https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
-### git token automatically authentication
-
-友情链接：
-
-https://github.com/GitCredentialManager/git-credential-manager
-
-```shell
-yay -S git-credential-manager-core
-git config --global credential.credentialStore cache
-```
-
-此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
-
-cache只是一种内置临时缓存，默认情况下存储900秒。
-
-还可以尝试secretservice，大概是以keyring的形式储存token
-
-```shell
-config --global credential.credentialStore secretservice
-
-error:
-fatal: Failed to open secret service session [0x2]
-fatal: The name org.freedesktop.secrets was not provided by any .service files
-
-solution:
-yay -S gnome-keyring
-```
-
-keyring管理工具：
-
-```shell
-yay -S seahorse
-```
-
-然后第二天遇到一个error：
-
-```sheel
-fatal: Failed to open secret service session [0x13]
-fatal: No such secret item at path: /org/freedesktop/secrets/collection/login/1
-
-solution:
-curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh &&
-sh ./install-from-source.sh &&
-git-credential-manager-core configure
-
-sudo dpkg -i <path-to-package>
-git-credential-manager-core configure
-```
-
-https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
-
-下载最新的GCM,这里推荐deb格式 <path-to-package>处填写路径。
-
 ### zsh内中文显示与git中文显示问题
 
 发现设置成英文后，终端内仍然有大量中文。
