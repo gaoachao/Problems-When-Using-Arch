@@ -231,7 +231,7 @@ git-credential-manager-core configure
 
 https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
 
-下载最新的GCM,推荐deb格式 <path-to-package>处填写路径。
+下载最新的GCM,这里推荐deb格式 <path-to-package>处填写路径。
 
 ### zsh内中文显示与git中文显示问题
 
