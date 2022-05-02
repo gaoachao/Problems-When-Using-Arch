@@ -136,6 +136,7 @@ sudo chsh -s /bin/zsh username
 yay -S tokei   (代码统计)
 yay -S spectacle（截图工具，可以自己设置快捷键）
 yay -S Yakuake  (终端模拟器,快捷键F12)
+yay -S screenfetch (终端上显示archlinux系统信息)
 ```
 
 ### 中文输入法
