@@ -1,12 +1,12 @@
  
 
-## git token automatically authentication
+# git token automatically authentication
 
-前言：
+**前言：**
 
 每一次讲代码push到github都需要认证token，为了减少麻烦，打算自动认证Token。
 
-友情链接：
+**友情链接：**
 
 https://github.com/GitCredentialManager/git-credential-manager
 
@@ -27,13 +27,13 @@ cache是一种内置临时缓存，默认情况下存储900秒。
 config --global credential.credentialStore secretservice
 ```
 
-keyring管理工具：
+**keyring管理工具：**
 
 ```shell
 yay -S seahorse
 ```
 
-可能会遇到的错误和解决方法：
+**可能会遇到的错误和解决方法：**
 
 ```
 error:
@@ -59,4 +59,4 @@ git-credential-manager-core configure
 
 https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
 
-下载最新的GCM，推荐deb格式且再在 <path-to-package>处填写路径。
+下载最新的GCM，推荐deb格式且再在 "path-to-package"处填写路径。
