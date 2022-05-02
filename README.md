@@ -204,6 +204,8 @@ fatal: The name org.freedesktop.secrets was not provided by any .service files
 
 solution:
 yay -S gnome-keyring
+同时可以下载seahorse来查看keyring
+yay -S seahorse
 ```
 
 遇到一个error：
