@@ -191,18 +191,14 @@ yay -S git-credential-manager-core
 git config --global credential.credentialStore cache
 ```
 
-https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
-
-curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh &&
-sh ./install-from-source.sh &&
-git-credential-manager-core configure此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
+此处可以选择  credentialStore 的储存方式，再根据terminal提示进行设置。
 
 cache只是一种内置临时缓存，默认情况下存储900秒。
 
-可以尝试secretservice。
+还可以尝试secretservice，大概是以keyring的形式储存token
 
 ```shell
-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git config --global credential.credentialStore secretservice
+config --global credential.credentialStore secretservice
 
 error:
 fatal: Failed to open secret service session [0x2]
@@ -210,15 +206,15 @@ fatal: The name org.freedesktop.secrets was not provided by any .service files
 
 solution:
 yay -S gnome-keyring
-同时可以下载seahorse来查看keyring
+```
+
+keyring管理工具：
+
+```shell
 yay -S seahorse
 ```
 
 然后第二天遇到一个error：
-
-https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
-
-下载最新的GCM 推荐deb格式
 
 ```sheel
 fatal: Failed to open secret service session [0x13]
@@ -232,6 +228,10 @@ git-credential-manager-core configure
 sudo dpkg -i <path-to-package>
 git-credential-manager-core configure
 ```
+
+https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
+
+下载最新的GCM,推荐deb格式 <path-to-package>处填写路径。
 
 ### zsh内中文显示与git中文显示问题
 
