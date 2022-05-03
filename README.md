@@ -186,7 +186,21 @@ https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
 友情链接：
 
+[在zsh内出现大量中文]: https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AF%AD%E8%A8%80%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9
+
 https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AF%AD%E8%A8%80%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9
+
+```
+cd ~/.config
+code plasma-localerc
+
+delete:
+[Translations]
+LANGUAGE=en_US:zh_CN
+
+reason:
+KDE Plasma change the locale in zsh
+```
 
 git设置：
 
