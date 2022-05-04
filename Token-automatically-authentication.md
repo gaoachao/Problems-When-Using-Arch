@@ -4,7 +4,7 @@
 
 **前言：**
 
-每一次讲代码push到github都需要认证token，为了减少麻烦，打算自动认证Token。
+每一次将代码push到github都需要认证token，为了减少麻烦，bitter-gourd想要shell自动认证Token。
 
 **友情链接：**
 
