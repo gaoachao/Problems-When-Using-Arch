@@ -4,7 +4,7 @@
 
 **前言：**
 
-每一次将代码push到github都需要认证token，为了减少麻烦，bitter-gourd想要shell自动认证Token。
+每一次将代码push到github都需要认证Token，为了减少麻烦，bitter-gourd想要shell自动认证Token。
 
 **友情链接：**
 
@@ -31,6 +31,13 @@ config --global credential.credentialStore secretservice
 
 ```shell
 yay -S seahorse
+```
+
+在seahorse内可以查看是否存有github的Token，如果没有的话：
+
+```
+config --global credential.credentialStore secretservice
+选3后再输入一次Token
 ```
 
 **可能会遇到的错误和解决方法：**
@@ -60,3 +67,4 @@ git-credential-manager-core configure
 https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.696
 
 下载最新的GCM，推荐deb格式且再在 "path-to-package"处填写路径。
+
