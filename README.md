@@ -23,7 +23,7 @@
 - [中文输入法](#中文输入法)
 - [系统时间](#系统时间)
 - [安装QQ](#安装QQ)
-- [VS code 安装相关](#更新日志)
+- [VScode安装相关](#VScode安装相关)
 
 ### 配置git
 
@@ -258,7 +258,7 @@ yay -Syu
 
 yay -Syu的时候是先更新系统再更新AUR包。
 
-### VS code 安装相关
+### VScode安装相关
 
 1.about failing to use contension:open in browers 
 
@@ -273,6 +273,4 @@ change google-chrome to google-chrome-stable
 reason:
 for google chrome in arch linux is google-chrome-stable
 ```
-
-
 
