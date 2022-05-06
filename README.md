@@ -6,13 +6,9 @@
 
 此处特别鸣谢全世界最好的:heart:鲨鱼姐姐:heart:
 
-一些友情链接:
+**一些友情链接:**
 
-[viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )
-
-[viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)
-
-[鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
+[viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )        [viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)         [鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
 ### **4.30补充**：
 
@@ -22,7 +18,7 @@
 
 - [配置git](#配置git)
 - [使用yay过程中遇到的困难](#使用yay过程中遇到的困难)
-- [安装Z Shell过程做遇到的困难](#安装Z Shell过程做遇到的困难)
+- [安装ZShell过程中遇到的困难](#安装ZShell过程中遇到的困难)
 - [一些有用的package](#一些有用的package)
 - [中文输入法](#中文输入法)
 - [系统时间](#系统时间)
@@ -67,7 +63,7 @@ sudo rm -R /var/lib/pacman/sync
 sudo -E pacman -Syu
 ```
 
-### 安装Z Shell过程做遇到的困难
+### 安装ZShell过程中遇到的困难
 
   1.oh-my-zsh的安装(https://ohmyz.sh/#install) 需要安装curl然后直接在官网复制命令行。
 
