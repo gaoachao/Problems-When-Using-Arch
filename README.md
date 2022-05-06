@@ -8,15 +8,26 @@
 
 一些友情链接:
 
-https://www.viseator.com/2017/07/02/arch_more/ (archlinux下配置开发环境)
+[viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )
 
-https://www.viseator.com/2017/05/17/arch_install/  (安装arch)
+[viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)
 
-https://github.com/JunkFood02/Arch-Linux-Installation-Guide (安装arch)
+[鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
 ### **4.30补充**：
 
 为了纪念存活4天的airchlinux(4.26-4.29)bitter-gourd决定再写点配置过程中新遇到的坑和解决方案。
+
+### 索引：
+
+- [配置git](#配置git)
+- [使用yay过程中遇到的困难](#使用yay过程中遇到的困难)
+- [安装Z Shell过程做遇到的困难](#安装Z Shell过程做遇到的困难)
+- [一些有用的package](#一些有用的package)
+- [中文输入法](#中文输入法)
+- [系统时间](#系统时间)
+- [安装QQ](#安装QQ)
+- [VS code 安装相关](#更新日志)
 
 ### 配置git
 
@@ -130,6 +141,33 @@ PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$res
 sudo chsh -s /bin/zsh username
 ```
 
+6.zsh内中文显示与git中文显示问题
+
+发现将zsh locale设置成英文后，仍然有大量中文。
+
+友情链接：
+
+https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AF%AD%E8%A8%80%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9
+
+```
+cd ~/.config
+code plasma-localerc
+
+delete:
+[Translations]
+LANGUAGE=en_US:zh_CN
+
+reason:
+KDE Plasma change the locale in zsh
+```
+
+git设置：
+
+```shell
+code .zshrc
+alias git='LANG=en_GB git'
+```
+
 ### 一些有用的package
 
 ```shell
@@ -137,6 +175,8 @@ yay -S tokei   (代码统计)
 yay -S spectacle（截图工具，可以自己设置快捷键）
 yay -S Yakuake  (终端模拟器,快捷键F12)
 yay -S screenfetch (终端上显示archlinux系统信息)
+yay -S deepin-wine-qq (qq)
+yay -S typora  (typora)
 ```
 
 ### 中文输入法
@@ -180,32 +220,47 @@ https://wiki.archlinux.org/title/System_time#Read_hardware_clock
 
 https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
-### zsh内中文显示与git中文显示问题
-
-发现设置成英文后，终端内仍然有大量中文。
+### 安装QQ
 
 友情链接：
 
-https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AF%AD%E8%A8%80%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9
+https://github.com/vufa/deepin-wine-qq-arch#%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AE%B0%E5%BD%95
 
-```
-cd ~/.config
-code plasma-localerc
+省流版：
 
-delete:
-[Translations]
-LANGUAGE=en_US:zh_CN
-
-reason:
-KDE Plasma change the locale in zsh
-```
-
-git设置：
+`deepin-wine-qq` 依赖`Multilib`仓库中的一些32位库，Archlinux默认没有开启 `Multilib`仓库，需要编辑`/etc/pacman.conf`，取消对应行前面的注释([Archlinux wiki](https://wiki.archlinux.org/index.php/Official_repositories#multilib)):
 
 ```shell
-code .zshrc
-alias git='LANG=en_GB git'
+# If you want to run 32 bit applications on your x86_64 system,
+# enable the multilib repositories as required here.
+
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+-#[multilib]
+-#Include = /etc/pacman.d/mirrorlist
++[multilib]
++Include = /etc/pacman.d/mirrorlist
 ```
+
+```shell
+yay -S deepin-wine-qq
+```
+
+如果还是发现32位文件无法安装，应该是需要`-Syu`
+
+```
+yay -Syu
+或者上述命令改为 yay -Syu deepin-wine-qq
+```
+
+-y 更新database
+-u 更新系统
+-Syu 需要一起出现！！！ 否则会出现新AUR包不匹配旧的系统。
+
+长时间没有更新，则.....喜提重装arch体验卡！
+
+yay -Syu的时候是先更新系统再更新AUR包。
 
 ### VS code 安装相关
 
