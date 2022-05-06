@@ -8,7 +8,7 @@
 
 **一些友情链接:**
 
-[viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )        [viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)         [鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
+[1.viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )        [2.viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)         [3.鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
 ### **4.30补充**：
 
