@@ -220,7 +220,7 @@ https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
 
 友情链接：
 
-https://github.com/vufa/deepin-wine-qq-arch#%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AE%B0%E5%BD%95
+https://github.com/vufa/deepin-wine-qq-arch
 
 省流版：
 
