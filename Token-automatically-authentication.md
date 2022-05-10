@@ -33,7 +33,7 @@ config --global credential.credentialStore secretservice
 yay -S seahorse
 ```
 
-在seahorse内可以查看是否存有github的Token，如果没有的话：
+在seahorse内可以查看是否存有github的Token。如果没有的话：
 
 ```
 config --global credential.credentialStore secretservice
