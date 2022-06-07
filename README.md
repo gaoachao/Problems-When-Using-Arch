@@ -2,7 +2,15 @@
 
 ### 前言：
 
-为了纪念存活17天的archlinux（4.9-4.25）以及懊恼于重装系统后搭建开发环境时第二遍踩入的坑。也为了防止下一次重装系统时走入歧途，同时希望对完成装载archlinux系统后配置环境的同学提供一些帮助，bitter-gourd决定写下一些文字。
+纪念存活17天的`archlinux1.0`（4.9-4.25）；
+
+懊恼于重装系统后搭建开发环境时第二遍踩入的坑；
+
+为了防止下一次重装系统时走入歧途；
+
+希望对完成装载archlinux系统后配置环境的同学提供一些帮助，
+
+bitter-gourd决定写下一些文字。
 
 此处特别鸣谢全世界最好的:heart:鲨鱼姐姐:heart:
 
@@ -12,7 +20,7 @@
 
 ### **4.30补充**：
 
-为了纪念存活4天的archlinux(4.26-4.29)bitter-gourd决定再写点配置过程中新遇到的坑和解决方案。
+为了纪念存活4天的`archlinux2.0`(4.26-4.29)bitter-gourd决定再写点配置过程中新遇到的坑和解决方案。
 
 ### 索引：
 
@@ -23,6 +31,8 @@
 - [中文输入法](#中文输入法)
 - [系统时间](#系统时间)
 - [安装QQ](#安装QQ)
+- [浏览器视频无法播放](#视频无法播放)
+- [PC喇叭](#PC喇叭)
 - [VScode安装相关](#VScode安装相关)
 
 ### 配置git
@@ -65,7 +75,7 @@ sudo -E pacman -Syu
 
 ### 安装ZShell过程中遇到的困难
 
-  1.oh-my-zsh的安装(https://ohmyz.sh/#install) 需要安装curl然后直接在官网复制命令行。
+  1.[oh-my-zsh的安装](https://ohmyz.sh/#install) 需要安装curl然后直接在官网复制命令行。
 
 ```shell
 yay -Syu curl
@@ -258,9 +268,46 @@ yay -Syu
 
 yay -Syu的时候是先更新系统再更新AUR包。
 
+### 视频无法播放
+
+遇到YouTubu无法播放视频，原因很有可能是[pulseaudio](https://wiki.archlinux.org/title/PulseAudio)
+
+**临时的解决方法**
+
+```shell
+pulseaudio --kill
+pulseaudio --start
+```
+
+**更好的解决方法**
+
+[Browser Not Playing Video](https://bbs.archlinux.org/viewtopic.php?id=276596)
+
+```shell
+yay -Rdd pulseaudio
+yay -Syu pipewire-pulse
+```
+
+### PC喇叭
+
+遇到关机、休眠、重启时有“嘟”的一声，在wine-qq里面多按一下backspace键会有“嘟”的一声。[PC speaker](https://wiki.archlinux.org/title/PC_speaker)
+
+可以通过在内核模块中移除`pcspkr` 模块来完全禁用PC喇叭：
+
+```
+# rmmod pcspkr
+```
+
+将 `pcspkr` 模块加入黑名单的方法可以阻止 udev 在启动时加载它。创建文件：
+
+```
+/etc/modprobe.d/nobeep.conf
+blacklist pcspkr
+```
+
 ### VScode安装相关
 
-1.about failing to use contension:open in browers 
+1.about failing to use contension:`open in browers `
 
 ```shell
 Vscode Error : 
@@ -274,3 +321,17 @@ reason:
 for google chrome in arch linux is google-chrome-stable
 ```
 
+2.`Live Server`
+
+```
+solution:
+~/.vscode/extentions/ritwickdet.liveserver-5.7.5/out/src/appModel.js
+change google-chrome to google-chrome-stable
+
+reason:
+for google chrome in arch linux is google-chrome-stable
+```
+
+3.格式化代码快捷键变化
+
+`ctrl + shift + i `
