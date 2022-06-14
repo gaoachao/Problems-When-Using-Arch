@@ -16,7 +16,7 @@ bitter-gourd决定写下一些文字。
 
 **一些友情链接:**
 
-[1.viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )        [2.viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)         [3.鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
+[1.viseator学长archlinux下配置开发环境](https://www.viseator.com/2017/07/02/arch_more/ )          [2.viseator学长安装arch教程](https://www.viseator.com/2017/05/17/arch_install/)           [3.鲨鱼姐姐安装arch教程](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
 ### **4.30补充**：
 
@@ -33,6 +33,7 @@ bitter-gourd决定写下一些文字。
 - [安装QQ](#安装QQ)
 - [浏览器视频无法播放](#视频无法播放)
 - [PC喇叭](#PC喇叭)
+- [修正简体中文](修正简体中文显示为异体（日文）字形)
 - [VScode安装相关](#VScode安装相关)
 
 ### 配置git
@@ -304,6 +305,16 @@ yay -Syu pipewire-pulse
 /etc/modprobe.d/nobeep.conf
 blacklist pcspkr
 ```
+
+### 修正简体中文显示为异体（日文）字形
+
+**问题描述：**
+
+安装完字体包后会有个别字的写法不符合简体中文世界的标准。
+
+**解决方法：**
+
+[archwiki上给出了清晰的解决方法](https://wiki.archlinux.org/title/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BF%AE%E6%AD%A3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%BC%82%E4%BD%93%EF%BC%88%E6%97%A5%E6%96%87%EF%BC%89%E5%AD%97%E5%BD%A2)
 
 ### VScode安装相关
 
